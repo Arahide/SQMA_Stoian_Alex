@@ -1,13 +1,13 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-class LoginTest {
+public class LoginTest {
 
     @Test
-    void login() {
+    public void login() {
         Example example = new Example("admin", "adminPass");
-        Assertions.assertTrue(example.login("admin", "adminPass"));
-        Assertions.assertFalse(example.login("admin", "admin"));
+        assertTrue(example.login("admin", "adminPass"));
+        assertFalse(example.login("admin", "admin"));
     }
 
 }
